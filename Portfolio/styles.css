@@ -1,0 +1,179 @@
+/*
+ * EDITING GUIDELINES:
+ * 1. FONT-FAMILY: Change 'Inter' to the font you want (e.g., 'Roboto', 'Lora', 'Georgia').
+ * 2. COLORS: Change the 'body' and 'a' color variables to match your friend's site.
+ * 3. PROJECT GRID: Adjust the 'grid-template-columns' property for different layouts.
+*/
+
+:root {
+    /* Define primary text color */
+    --text-color: #1a1a1a;
+    /* Define background color */
+    --bg-color: #ffffff;
+    /* Define link/hover color */
+    --link-color: #6a6a6a;
+}
+
+body {
+    font-family: 'Inter', sans-serif; /* CHANGE THIS FONT */
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* --- Typography & Headings --- */
+h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.2rem;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--text-color);
+}
+
+.location, .status, .category {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+/* --- Header Section --- */
+header h1, header h2 {
+    text-align: left;
+    margin-top: 0;
+}
+header .bio-text {
+    max-width: 600px;
+    margin-top: 30px;
+    font-size: 1.1rem;
+}
+
+/* --- Project Grid --- */
+.project-grid {
+    display: grid;
+    /* This creates a 3-column layout on large screens */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px 30px;
+    padding-top: 0;
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* --- Services Section --- */
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.service-category {
+    flex: 1 1 30%; /* Ensures 3 columns on desktop, wraps on mobile */
+    min-width: 200px;
+}
+
+.service-category ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* --- Process Section --- */
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+.process-steps h4 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+/* --- Footer & Contact --- */
+footer {
+    text-align: center;
+    border-top: 1px solid #eee;
+    padding-bottom: 30px;
+    padding-top: 40px;
+}
+footer h2 {
+    margin-bottom: 10px;
+}
+.contact-cta {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+.email-link a {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.social-links {
+    margin: 20px 0;
+}
+.social-links a {
+    margin: 0 15px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+.copyright {
+    font-size: 0.8rem;
+    color: #999;
+    margin-top: 30px;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+    }
+    .container {
+        padding: 40px 15px;
+    }
+    .project-grid {
+        /* Changes to 2 columns on smaller screens */
+        grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+    }
+    .services-list {
+        /* Stacks services vertically on very small screens */
+        flex-direction: column;
+    }
+}
