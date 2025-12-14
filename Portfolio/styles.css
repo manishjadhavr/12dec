@@ -15,7 +15,7 @@
 }
 
 body {
-    font-family: 'Roboto+Condense', sans-serif; /* CHANGE THIS FONT */
+    font-family: 'Roboto+Condensed', sans-serif; /* CHANGE THIS FONT */
     color: var(--text-color);
     background-color: var(--bg-color);
     line-height: 1.6;
